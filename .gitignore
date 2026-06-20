@@ -1,0 +1,168 @@
+# ============================================
+# .gitignore para DentalClinicSystem
+# Basado en la estructura actual del proyecto
+# ============================================
+
+# -------------------------------
+# BASE DE DATOS SQLITE (NO SUBIR)
+# -------------------------------
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+/data/
+/data/*.db
+data/
+data/*.db
+
+# -------------------------------
+# BACKUPS (NO SUBIR)
+# -------------------------------
+/backups/
+/backups/*
+backups/
+backups/*
+/nbackups/
+nbackups/
+*.bak
+*.backup
+
+# -------------------------------
+# FACTURAS Y DOCUMENTOS (PRIVACIDAD)
+# -------------------------------
+/facturas/
+/facturas/*
+facturas/
+facturas/*.pdf
+facturas/*.png
+facturas/*.jpg
+
+# -------------------------------
+# FOTOS DE CLIENTES (PRIVACIDAD)
+# -------------------------------
+/fotos_clientes/
+/fotos_clientes/*
+fotos_clientes/
+fotos_clientes/*.jpg
+fotos_clientes/*.png
+fotos_clientes/*.jpeg
+
+# -------------------------------
+# ARCHIVOS DE CONFIGURACIÓN (CREDENCIALES)
+# -------------------------------
+*.properties
+app.properties
+config.properties
+application.properties
+*.key
+license.key
+*.pem
+*.crt
+.env
+.env.local
+
+# -------------------------------
+# EJECUTABLES JAR (COMPILADOS)
+# -------------------------------
+*.jar
+DentalClinicSystem*.jar
+DentalClinicSystem
+DentalClinicSystem.jar
+*.war
+*.ear
+
+# -------------------------------
+# ARCHIVOS COMPILADOS DE JAVA
+# -------------------------------
+/classes/
+classes/
+*.class
+/target/
+/build/
+/dist/
+/bin/
+/out/
+
+# -------------------------------
+# ARCHIVOS TEMPORALES
+# -------------------------------
+*.tmp
+*.temp
+*.log
+/logs/
+logs/
+*.swp
+*.swo
+*~
+
+# -------------------------------
+# ARCHIVOS DE IDE
+# -------------------------------
+# IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Eclipse
+.settings/
+.project
+.classpath
+.metadata/
+
+# NetBeans
+nbproject/
+nbactions.xml
+nb-configuration.xml
+.nb-gradle/
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# -------------------------------
+# ARCHIVOS DE SISTEMA OPERATIVO
+# -------------------------------
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+desktop.ini
+ehthumbs.db
+$RECYCLE.BIN/
+
+# Linux
+.directory
+*.orig
+*.bak
+
+# -------------------------------
+# CARPETAS QUE QUEREMOS MANTENER (vacías)
+# -------------------------------
+# Estos .gitkeep mantienen la estructura
+!data/.gitkeep
+!backups/.gitkeep
+!facturas/.gitkeep
+!fotos_clientes/.gitkeep
+!logs/.gitkeep
+
+# -------------------------------
+# OTROS ARCHIVOS GENERADOS
+# -------------------------------
+*.log
+*.lock
+*.rej
+*.orig
+*.patch
+# -------------------------------
+# OTROS ARCHIVOS GENERADOS
+# -------------------------------
+/Documentacion
+/config
+/encuestas
+/uploads
