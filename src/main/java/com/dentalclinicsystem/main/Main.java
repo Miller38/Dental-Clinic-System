@@ -9,6 +9,7 @@ import com.dentalclinicsystem.util.LicenseManager;
 import com.dentalclinicsystem.view.ActivationDialog;
 import com.dentalclinicsystem.view.LoginView;
 import com.dentalclinicsystem.view.SplashScreen;
+import com.dentalclinicsystem.view.TermsAndConditionsDialog;
 import com.formdev.flatlaf.FlatDarkLaf;
 
 import javax.swing.*;
@@ -83,6 +84,32 @@ public class Main {
                 if (!LicenseManager.licenciaValida()) {
                     System.exit(0);
                 }
+            }
+            
+            // ================================================================
+            // ========== ✅ RESET PARA PRUEBAS ===============================
+            // ================================================================            
+            //TermsAndConditionsDialog.resetTerms();
+            
+            // ================================================================
+            // ✅ NUEVO: VALIDAR TÉRMINOS Y CONDICIONES (SOLO UNA VEZ)
+            // ================================================================
+          
+            if (TermsAndConditionsDialog.isFirstExecution() || 
+                !TermsAndConditionsDialog.hasAcceptedTerms()) {
+                
+                System.out.println("📋 Mostrando Términos y Condiciones");
+                TermsAndConditionsDialog termsDialog = new TermsAndConditionsDialog(null);
+                termsDialog.setVisible(true);
+                
+                if (!termsDialog.isAccepted()) {
+                    System.out.println("❌ Usuario rechazó los términos");
+                    System.exit(0);
+                }
+                
+                System.out.println("✅ Términos aceptados");
+            } else {
+                System.out.println("✅ Términos ya aceptados previamente");
             }
 
             // ================================================================

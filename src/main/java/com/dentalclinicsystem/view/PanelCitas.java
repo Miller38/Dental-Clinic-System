@@ -82,7 +82,7 @@ public class PanelCitas extends JPanel {
         JPanel centerPanel = new JPanel(new BorderLayout(0, 8));
         centerPanel.setBackground(darkBg);
 
-        JPanel resumenPanel = createResumenDiarioPanel();
+       JPanel resumenPanel = createResumenDiarioPanel();
         centerPanel.add(resumenPanel, BorderLayout.NORTH);
 
         JPanel tablePanel = createTablePanel();
